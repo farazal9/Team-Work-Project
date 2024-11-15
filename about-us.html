@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <!-- 
+     ======================
+     HEADER MENU 
+     ======================
+      -->
+
+    <nav class="navbar navbar-expand-lg dark">
+      <div class="container">
+        <div class="d-flex flex-column">
+          <h2 class="header-icon text-light fw-bold my-0">
+            <i>Furniture Haven</i>
+          </h2>
+          <span class="text-light">interior design</span>
+        </div>
+        <button
+          class="navbar-toggler bg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto my-2">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-light"
+                aria-current="page"
+                href="./homePage.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light mx-sm-3" href="./index.html"
+                >Products</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="./about-us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light mx-sm-3" href="./contact-us.html"
+                >Contact Us</a
+              >
+            </li>
+            <li class="nav-item dropdown" id="servicesDropdown">
+              <a
+                class="nav-link text-light dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+              >
+                Our Services
+              </a>
+              <ul class="dropdown-menu animate slideIn" aria-labelledby="servicesDropdown">
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="./services-1.html">
+                    <i class="bi bi-house-gear"></i>
+                    Interior Design
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="./services/index.html">
+                    <i class="bi bi-rulers"></i>
+                    Space Planning
+                  </a>
+                </li>
+            
+              
+              </ul>
+            </li>
+          </ul>
+          <div class="nav-icons d-flex align-items-center gap-4">
+            <!-- Account Icon -->
+            <div class="icon-wrapper" id="popoverIcon">
+              <i class="bi bi-person-circle text-light fs-5"></i>
+            </div>
+            
+            <!-- Cart Icon with Counter -->
+            <a class="icon-wrapper text-decoration-none position-relative" href="./addToCart.html">
+              <i class="bi bi-bag text-light fs-5"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+                0
+                <span class="visually-hidden">items in cart</span>
+              </span>
+            </a>
+            
+            <!-- Search Icon -->
+            <div class="search-wrapper">
+              <div class="search-toggle icon-wrapper">
+                <i class="bi bi-search text-light fs-5"></i>
+              </div>
+              <div class="cool-search-box d-none">
+                <div class="search-inner">
+                  <input type="text" placeholder="Search here...">
+                  <button class="search-submit">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </div>
+                <div class="search-suggestions">
+                  <div class="suggestion-header">Popular Searches</div>
+                  <div class="suggestion-item">Modern Sofa</div>
+                  <div class="suggestion-item">Dining Table</div>
+                  <div class="suggestion-item">Bedroom Set</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="container">
+      <!-- 
+     ======================
+    About Us
+     ======================
+      -->
+      <div class="row section mt-5 gx-5">
+        <div class="col-6 d-flex flex-column justify-content-center">
+          <div class="about-content pe-4">
+            <div class="section-badge mb-3">EST. 2001</div>
+            <h2 class="section-title mb-4">About Us</h2>
+            <p class="section-text mb-4">
+              Founded in 2001, Furniture Haven has been dedicated to creating
+              beautiful, functional furniture that transforms homes and elevates
+              lifestyles.
+              <span id="moreTextAbout" class="collapse">
+                With a focus on quality craftsmanship, innovative designs, and
+                exceptional customer service, we strive to offer furniture
+                solutions that cater to modern living. Over the years, we have
+                grown from a small startup into a trusted brand, known for
+                delivering premium furniture with both style and substance.
+              </span>
+            </p>
+            <button
+              onclick="toggleText('moreTextAbout', 'seeMoreLink')"
+              id="seeMoreLink"
+              class="read-more-btn"
+            >
+              <span>Read More</span>
+              <svg class="btn-icon" viewBox="0 0 12 12">
+                <path d="M1 7l5-5 5 5"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="image-card">
+            <div class="image-card__content">
+              <img
+                src="./images-2/image.png"
+                alt="Group of people discussing furniture designs"
+                class="image-card__img"
+              />
+              <div class="image-card__overlay"></div>
+              <div class="image-card__details">
+                <span class="image-card__caption">Our Workshop</span>
+                <span class="image-card__year">Since 2001</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Our Mission -->
+      <div class="row section mt-5 gx-5">
+        <!-- Image Section -->
+        <div class="col-6" style="padding: 1px">
+          <div class="image-card">
+            <div class="image-card__content">
+              <img
+                src="./images-2/image (1).png"
+                alt="Team of people celebrating a successful project in an office"
+                class="image-card__img"
+              />
+              <div class="image-card__overlay"></div>
+              <div class="image-card__details">
+                <span class="image-card__caption">Our Vision</span>
+                <span class="image-card__year">Excellence in Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mission Content -->
+        <div class="col-6 d-flex flex-column justify-content-center">
+          <div class="about-content ps-4">
+            <div class="section-badge mb-3">OUR PURPOSE</div>
+            <h2 class="section-title mb-4">Our Mission</h2>
+            <p class="section-text mb-4">
+              Our mission is to provide customers with thoughtfully designed
+              furniture that balances aesthetics and functionality.
+              <span id="moreTextMission" class="collapse">
+                We believe that great furniture should not only enhance the beauty
+                of a space but also serve the practical needs of everyday life. By
+                making high-quality furniture accessible and affordable, we aim to
+                help customers create homes they love.
+              </span>
+            </p>
+            <button
+              onclick="toggleText('moreTextMission', 'seeMoreMissionLink')"
+              id="seeMoreMissionLink"
+              class="read-more-btn"
+            >
+              <span>Read More</span>
+              <svg class="btn-icon" viewBox="0 0 12 12">
+                <path d="M1 7l5-5 5 5"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Our Achievements -->
+
+      <div class="row section mt-5 gx-5">
+        <!-- Achievements Content -->
+        <div class="col-6 d-flex flex-column justify-content-center">
+          <div class="about-content pe-4">
+            <div class="section-badge mb-3">SINCE 2001</div>
+            <h2 class="section-title mb-4">Our Achievements</h2>
+            <p class="section-text mb-4">
+              Since our inception in 2001, we have achieved significant milestones, including:
+            </p>
+            <span id="moreAchievementsText" style="display: none;">
+              <ul class="list-unstyled mt-3">
+                <li class="mb-3">
+                  <strong class="d-block text-dark mb-1">500,000+ Satisfied Customers:</strong>
+                  A loyal customer base that continues to trust us.
+                </li>
+                <li class="mb-3">
+                  <strong class="d-block text-dark mb-1">Award-Winning Designs:</strong>
+                  Our designs have been recognized for their innovation, sustainability, and timeless appeal.
+                </li>
+                <li class="mb-3">
+                  <strong class="d-block text-dark mb-1">Global Reach:</strong>
+                  Starting locally, we have expanded internationally, offering our products worldwide.
+                </li>
+                <li class="mb-3">
+                  <strong class="d-block text-dark mb-1">Sustainable Practices:</strong>
+                  We incorporate eco-friendly materials, ensuring our furniture is planet-friendly.
+                </li>
+              </ul>
+            </span>
+            <button
+              onclick="toggleText('moreAchievementsText', 'seeMoreAchievementsLink')"
+              id="seeMoreAchievementsLink"
+              class="read-more-btn"
+            >
+              <span>Read More</span>
+              <svg class="btn-icon" viewBox="0 0 12 12">
+                <path d="M1 7l5-5 5 5"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      
+        <!-- Image Section -->
+        <div class="col-6" style="padding: 1px">
+          <div class="image-card">
+            <div class="image-card__content">
+              <img
+                src="https://storage.googleapis.com/a1aa/image/Y8qM4yk6DC6ED9eYxJj53yKiVebLglU9SmkKHYpqlTtGzhpTA.jpg"
+                alt="Group of happy people celebrating in an office environment"
+                class="image-card__img"
+              />
+              <div class="image-card__overlay"></div>
+              <div class="image-card__details">
+                <span class="image-card__caption">Our Growth</span>
+                <span class="image-card__year">Milestones & Success</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meeeet our Team -->
+
+    <section class="team-section py-5 bg-light">
+      <!-- Team Header -->
+      <div class="container text-center mb-5">
+        <span class="badge bg-warning text-dark px-3 py-2 mb-3">OUR EXPERTS</span>
+        <h2 class="display-5 fw-bold mb-3">Meet Our Team</h2>
+        <p class="lead text-muted mx-auto" style="max-width: 600px;">
+          Our diverse team of experts brings together years of experience in furniture design, 
+          craftsmanship, and customer service to deliver exceptional results.
+        </p>
+      </div>
+
+      <!-- Team Grid -->
+      <div class="container">
+        <div class="row g-4">
+          <!-- Team Member 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="team-card h-100">
+              <div class="position-relative">
+                <img src="./images-2/team/image (4).svg" 
+                     alt="Ali - SEO Specialist" 
+                     class="w-100 team-img">
+                <div class="team-overlay">
+                  <div class="social-links">
+                    <a href="#" class="mx-2"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="mx-2"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="mx-2"><i class="bi bi-envelope"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="dark p-4 text-center">
+                <h4 class="text-light mb-1">Ali</h4>
+                <p class="text-warning mb-0">SEO Specialist</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="team-card h-100">
+              <div class="position-relative">
+                <img src="./images-2/team/image (1).svg" 
+                     alt="Faizan - DIY Expert" 
+                     class="w-100 team-img">
+                <div class="team-overlay">
+                  <div class="social-links">
+                    <a href="#" class="mx-2"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="mx-2"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="mx-2"><i class="bi bi-envelope"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="dark p-4 text-center">
+                <h4 class="text-light mb-1">Faizan</h4>
+                <p class="text-warning mb-0">DIY Expert</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="team-card h-100">
+              <div class="position-relative">
+                <img src="./images-2/team/image (5).svg" 
+                     alt="Sara - Head of Design" 
+                     class="w-100 team-img">
+                <div class="team-overlay">
+                  <div class="social-links">
+                    <a href="#" class="mx-2"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="mx-2"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="mx-2"><i class="bi bi-envelope"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="dark p-4 text-center">
+                <h4 class="text-light mb-1">Sara</h4>
+                <p class="text-warning mb-0">Head of Design</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="team-card h-100">
+              <div class="position-relative">
+                <img src="./images-2/team/image (3).svg" 
+                     alt="Ayesha - Interior Designer" 
+                     class="w-100 team-img">
+                <div class="team-overlay">
+                  <div class="social-links">
+                    <a href="#" class="mx-2"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="mx-2"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="mx-2"><i class="bi bi-envelope"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="dark p-4 text-center">
+                <h4 class="text-light mb-1">Ayesha</h4>
+                <p class="text-warning mb-0">Interior Designer</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="team-card h-100">
+              <div class="position-relative">
+                <img src="./images-2/team/image.svg" 
+                     alt="Usman - Lead Engineer" 
+                     class="w-100 team-img">
+                <div class="team-overlay">
+                  <div class="social-links">
+                    <a href="#" class="mx-2"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="mx-2"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="mx-2"><i class="bi bi-envelope"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="dark p-4 text-center">
+                <h4 class="text-light mb-1">Usman</h4>
+                <p class="text-warning mb-0">Lead Engineer</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="team-card h-100">
+              <div class="position-relative">
+                <img src="./images-2/team/image (2).svg" 
+                     alt="Maira - Marketing Strategist" 
+                     class="w-100 team-img">
+                <div class="team-overlay">
+                  <div class="social-links">
+                    <a href="#" class="mx-2"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="mx-2"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="mx-2"><i class="bi bi-envelope"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="dark p-4 text-center">
+                <h4 class="text-light mb-1">Maira</h4>
+                <p class="text-warning mb-0">Marketing Strategist</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 
+     ======================
+    FOOOTER
+     ======================
+      -->
+
+    <!-- full screen -->
+    <section class="mt-5 d-none d-md-block"> <!-- Hidden on all mobile screens -->
+      <div class="h-hs-bg text-white py-5 mt-5">
+        <div class="container">
+          <h2 class="text-center">Furniture Haven</h2>
+          <hr />
+    
+          <div class="row justify-content-between d-flex flex-column flex-md-row text-center text-md-start">
+            <ul class="col-12 col-md-2 mb-3 mb-md-0 ms-3">
+              <h4>About</h4>
+              <li class="list-unstyled">Our company</li>
+              <li class="list-unstyled my-2">Our Story</li>
+              <li class="list-unstyled">Blog</li>
+            </ul>
+    
+            <ul class="col-12 col-md-2 mb-3 mb-md-0">
+              <h4>Information</h4>
+              <li class="list-unstyled">Delivery Information</li>
+              <li class="list-unstyled my-2">Privacy Policy</li>
+              <li class="list-unstyled">Terms & Conditions</li>
+              <li class="list-unstyled mt-2">Returns</li>
+            </ul>
+    
+            <ul class="col-12 col-md-2 mb-3 mb-md-0">
+              <h4>Support</h4>
+              <li class="list-unstyled">Contact Us</li>
+              <li class="list-unstyled my-2">Help</li>
+              <li class="list-unstyled">FAQ</li>
+              <li class="list-unstyled mt-2">Checkout</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- small screen -->
+    <section class="d-block d-md-none"> <!-- Show on mobile screens only -->
+      <div class="h-hs-bg text-white py-5 mt-5">
+        <div class="container">
+          <h2 class="text-center">Furniture Haven</h2>
+          <hr />
+    
+          <div class="row d-flex justify-content-center text-center text-md-start">
+            <ul class="col-4 mb-3">
+              <h4>About</h4>
+              <li class="list-unstyled">Our company</li>
+              <li class="list-unstyled my-2">Our Story</li>
+              <li class="list-unstyled">Blog</li>
+            </ul>
+    
+            <ul class="col-4 mb-3">
+              <h4>Information</h4>
+              <li class="list-unstyled">Delivery Information</li>
+              <li class="list-unstyled my-2">Privacy Policy</li>
+              <li class="list-unstyled">Terms & Conditions</li>
+              <li class="list-unstyled mt-2">Returns</li>
+            </ul>
+    
+            <ul class="col-4 mb-3">
+              <h4>Support</h4>
+              <li class="list-unstyled">Contact Us</li>
+              <li class="list-unstyled my-2">Help</li>
+              <li class="list-unstyled">FAQ</li>
+              <li class="list-unstyled mt-2">Checkout</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="/index.js"></script>
+
+    <script>
+      function toggleText(textId, linkId) {
+        const moreText = document.getElementById(textId);
+        const link = document.getElementById(linkId);
+
+        if (moreText.style.display === "none") {
+          moreText.style.display = "inline";
+          link.innerText = "See Less";
+        } else {
+          moreText.style.display = "none";
+          link.innerText = "See More";
+        }
+      }
+    </script>
+
+
+  </body>
+</html>

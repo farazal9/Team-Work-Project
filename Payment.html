@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+
+
+    <!-- Header -->
+
+    <nav class="navbar navbar-expand-lg dark">
+        <div class="container">
+          <div class="d-flex flex-column">
+            <h2 class="header-icon text-light fw-bold my-0">
+              <i>Furniture Haven</i>
+            </h2>
+            <span class="text-light">interior design</span>
+          </div>
+          <button
+            class="navbar-toggler bg-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto my-2">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-light"
+                  aria-current="page"
+                  href="./homePage.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light mx-sm-3" href="./index.html"
+                  >Products</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="./about-us.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light mx-sm-3" href="./contact-us.html"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="nav-item" id="servicesDropdown">
+                <a class="nav-link text-light" href="./services-1.html" role="button">
+                  Our Services
+                </a>
+                <div class="hover-content mt-1">
+                  <a class="" href="./services/./index.html">Service Page 2</a>
+                </div>
+              </li>
+            </ul>
+            <div>
+                <img class="" src="../images/account.png" alt="Account" id="popoverIcon" /> 
+              <a class="text-decoration-none" href="./addToCart.html">
+                <img class="mx-3" src="../images/cart.png" alt="Cart" />
+              </a>
+              <img src="../images/search.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </nav>
+    <div class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6 col-lg-4">
+                <h1>Billing Detail</h1>
+                <div class="mb-3">
+                    <label class="fs-6 fw-medium" for="firstName">First name</label>
+                    <input class="form-control mt-2" id="firstName" type="text" required>
+                </div>
+                <div class="mb-3">
+                    <label class="fs-6 fw-medium" for="phoneNumber">Phone number</label>
+                    <input class="form-control mt-2" id="phoneNumber" type="tel" required>
+                </div>
+                <div class="mb-3">
+                    <label class="fs-6 fw-medium" for="country">Country</label>
+                    <input class="form-control mt-2" id="country" type="text" required>
+                </div>
+                <div class="mb-3">
+                    <label class="fs-6 fw-medium" for="zipCode">Zip code</label>
+                    <input class="form-control mt-2" id="zipCode" type="text" required>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-4">
+                <div class="mt-3">
+                    <label class="fs-6 fw-medium" for="lastName">Last name</label>
+                    <input class="form-control mt-2" id="lastName" type="text" required>
+                </div>
+                <div class="mt-3">
+                    <label class="fs-6 fw-medium" for="email">Email</label>
+                    <input class="form-control mt-2" id="email" type="email" required>
+                </div>
+                <div class="mt-3">
+                    <label class="fs-6 fw-medium" for="city">City</label>
+                    <input class="form-control mt-2" id="city" type="text" required>
+                </div>
+                <div class="mt-3">
+                    <label class="fs-6 fw-medium" for="address">Address</label>
+                    <input class="form-control mt-2" id="address" type="text" required>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mt-5 p-3 dark text-light" style="border-radius: 20px;">
+                <div class="card p-3 dark text-light">
+                    <div class="text-center py-2 mb-3 rounded-pill bg-warning">
+                        <h2 class="m-0">Order Detail</h2>
+                    </div>
+                    <div class="d-flex justify-content-between px-2">
+                        <p class="fs-5 fw-medium">Subtotal</p>
+                        <p id="subtotal" class="fs-5 fw-medium">$0.00</p>
+                    </div>
+                    <div class="d-flex justify-content-between px-2">
+                        <p class="fs-5 fw-medium">Delivery</p>
+                        <p class="fs-5 fw-medium">Free</p>
+                    </div>
+                    <div class="d-flex justify-content-between px-2">
+                        <p class="fs-5 fw-medium">Discount</p>
+                        <p id="discount" class="fs-5 fw-medium">0%</p>
+                    </div>
+                    <div class="d-flex justify-content-between px-2">
+                        <p class="fs-5 fw-medium">Total</p>
+                        <p id="totalAmount" class="fs-5 fw-medium">$0.00</p>
+                    </div>
+                    <div class="text-center">
+                        <button id="checkoutBtn" class="btn btn-warning mt-2 px-4 py-2">Check Out</button>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    
+        <div class="container my-3">
+            <h2>Choose a card</h2><br>
+            <input type="radio" id="Paypal" name="paymentMethod" value="Paypal" required>
+            <label for="Paypal">Paypal</label><br><br>
+            <input type="radio" id="CreditCard" name="paymentMethod" value="Credit card" required>
+            <label for="CreditCard">Credit card</label><br><br>
+            <input type="radio" id="GiftCard" name="paymentMethod" value="Gift card" required>
+            <label for="GiftCard">Gift card</label>
+        </div>
+    
+        <div class="d-flex container my-5">
+            <div class="my-3">
+                <label class="fs-6 fw-medium" for="cardName">Card name</label> <br>
+                <input class="form-control mt-2" id="cardName" type="text" required>
+            </div>
+            <div class="my-3 mx-5">
+                <label class="fs-6 fw-medium" for="cardNumber">Card number</label> <br>
+                <input class="form-control mt-2" id="cardNumber" type="text" required>
+            </div>
+        </div>
+    
+        <div class="container my-5">
+            <button id="checkoutBtnFinal" class="btn-warning btn">Check out</button>
+        </div>
+    </div>
+    
+    <!-- full screen -->
+    <section class="mt-5 d-none d-md-block"> <!-- Hidden on all mobile screens -->
+      <div class="h-hs-bg text-white py-5 mt-5">
+        <div class="container">
+          <h2 class="text-center">Furniture Haven</h2>
+          <hr />
+    
+          <div class="row justify-content-between d-flex flex-column flex-md-row text-center text-md-start">
+            <ul class="col-12 col-md-2 mb-3 mb-md-0 ms-3">
+              <h4>About</h4>
+              <li class="list-unstyled">Our company</li>
+              <li class="list-unstyled my-2">Our Story</li>
+              <li class="list-unstyled">Blog</li>
+            </ul>
+    
+            <ul class="col-12 col-md-2 mb-3 mb-md-0">
+              <h4>Information</h4>
+              <li class="list-unstyled">Delivery Information</li>
+              <li class="list-unstyled my-2">Privacy Policy</li>
+              <li class="list-unstyled">Terms & Conditions</li>
+              <li class="list-unstyled mt-2">Returns</li>
+            </ul>
+    
+            <ul class="col-12 col-md-2 mb-3 mb-md-0">
+              <h4>Support</h4>
+              <li class="list-unstyled">Contact Us</li>
+              <li class="list-unstyled my-2">Help</li>
+              <li class="list-unstyled">FAQ</li>
+              <li class="list-unstyled mt-2">Checkout</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- small screen -->
+    <section class="d-block d-md-none"> <!-- Show on mobile screens only -->
+      <div class="h-hs-bg text-white py-5 mt-5">
+        <div class="container">
+          <h2 class="text-center">Furniture Haven</h2>
+          <hr />
+    
+          <div class="row d-flex justify-content-center text-center text-md-start">
+            <ul class="col-4 mb-3">
+              <h4>About</h4>
+              <li class="list-unstyled">Our company</li>
+              <li class="list-unstyled my-2">Our Story</li>
+              <li class="list-unstyled">Blog</li>
+            </ul>
+    
+            <ul class="col-4 mb-3">
+              <h4>Information</h4>
+              <li class="list-unstyled">Delivery Information</li>
+              <li class="list-unstyled my-2">Privacy Policy</li>
+              <li class="list-unstyled">Terms & Conditions</li>
+              <li class="list-unstyled mt-2">Returns</li>
+            </ul>
+    
+            <ul class="col-4 mb-3">
+              <h4>Support</h4>
+              <li class="list-unstyled">Contact Us</li>
+              <li class="list-unstyled my-2">Help</li>
+              <li class="list-unstyled">FAQ</li>
+              <li class="list-unstyled mt-2">Checkout</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+<script src="./billing.js"></script>
+
+</body>
+
+</html>

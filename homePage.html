@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interior design website</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Add meta description for SEO -->
+    <meta name="description" content="Discover elegant furniture and interior design solutions at Furniture Haven. Shop our curated collection of modern, classic and contemporary furniture for your home." />
+
+    <!-- Add favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+  </head>
+
+  <body>
+    <div class="text-white">
+      <!-- Header -->
+    
+
+      <nav class="navbar navbar-expand-lg dark">
+        <div class="container">
+          <div class="d-flex flex-column">
+            <h2 class="header-icon text-light fw-bold my-0">
+              <i>Furniture Haven</i>
+            </h2>
+            <span class="text-light">interior design</span>
+          </div>
+          <button
+            class="navbar-toggler bg-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto my-2">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-light"
+                  aria-current="page"
+                  href="./homePage.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light mx-sm-3" href="./index.html"
+                  >Products</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="./about-us.html"
+                  >About Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light mx-sm-3" href="./contact-us.html"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="nav-item dropdown" id="servicesDropdown">
+                <a
+                  class="nav-link text-light dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-expanded="false"
+                >
+                  Our Services
+                </a>
+                <ul class="dropdown-menu animate slideIn" aria-labelledby="servicesDropdown">
+                  <li>
+                    <a class="dropdown-item d-flex align-items-center gap-2" href="./services-1.html">
+                      <i class="bi bi-house-gear"></i>
+                      Interior Design
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item d-flex align-items-center gap-2" href="./services/index.html">
+                      <i class="bi bi-rulers"></i>
+                      Space Planning
+                    </a>
+                  </li>
+                 
+                </ul>
+              </li>
+            </ul>
+            <div class="nav-icons d-flex align-items-center gap-4">
+              <div class="icon-wrapper" id="popoverIcon">
+                <i class="bi bi-person-circle text-light fs-5"></i>
+              </div>
+              <a class="icon-wrapper text-decoration-none position-relative" href="./addToCart.html">
+                <i class="bi bi-bag text-light fs-5"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+                  0
+                  <span class="visually-hidden">items in cart</span>
+                </span>
+              </a>
+              <div class="search-wrapper">
+                <div class="search-toggle icon-wrapper">
+                  <i class="bi bi-search text-light fs-5"></i>
+                </div>
+                <div class="cool-search-box d-none">
+                  <div class="search-inner">
+                    <input 
+                      type="text" 
+                      placeholder="Search here..."
+                      aria-label="Search products"
+                      class="form-control"
+                    >
+                    <button class="search-submit" aria-label="Submit search">
+                      <i class="bi bi-search"></i>
+                    </button>
+                  </div>
+                  <div class="search-suggestions">
+                    <div class="suggestion-header">Popular Searches</div>
+                    <div class="suggestion-items">
+                      <!-- Add data attributes for better tracking -->
+                      <div class="suggestion-item" data-category="living">Modern Sofa</div>
+                      <div class="suggestion-item" data-category="dining">Dining Table</div>
+                      <div class="suggestion-item" data-category="bedroom">Bedroom Set</div>
+                      <div class="suggestion-item" data-category="trending">New Arrivals</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- for mobile  -->
+      <h2 class="text-center mt-4 text-dark d-block d-sm-none">
+        Explore Furniture Haven
+      </h2>
+      <div class="mt-0 d-block d-sm-none">
+        <h2 class="text-center">Explore Furniture Haven</h2>
+        <div id="cardSlider" class="scroll-container d-flex">
+          <div class="product-card mx-1 " style="height: 250px">
+            <img
+              src="https://storage.googleapis.com/a1aa/image/6SZVnJvfpXyBUarMBPMDSAo495amlg88V3fEvifSTJVnOFYnA.jpg"
+              class="product-img rounded"
+              alt="Modern bed with stylish headboard and wall decor"
+              style="height: 200px; object-fit: cover"
+            />
+            <div
+              class="card-body text-center dark text-light rounded d-flex align-items-center justify-content-center"
+              style="height: 50px"
+            >
+              <h5 class="mb-0 p-2">Shop Products</h5>
+            </div>
+          </div>
+          <div class="product-card mx-1" style="height: 250px">
+            <img
+              src="https://storage.googleapis.com/a1aa/image/WPNJNIiEHeVfMEbjWi7fAwaXjRVLFXFQoasnRVBJZJBkOFYnA.jpg"
+              class="product-img rounded"
+              alt="Creative shelf with plants and decor items"
+              style="height: 200px; object-fit: cover"
+            />
+            <div
+              class="card-body text-center dark text-light rounded d-flex align-items-center justify-content-center overflow-hidden"
+              style="height: 50px"
+            >
+              <h5 class="mb-0 p-2">Discover Ideas</h5>
+            </div>
+          </div>
+          <div class="product-card mx-1" style="height: 250px">
+            <img
+              src="https://storage.googleapis.com/a1aa/image/SU6Df4G8Bo0zfkEIbxDBLchVOkrTIXLLrLoDD2III1sUnCsTA.jpg"
+              class="product-img rounded"
+              alt="Elegant bed with modern design and lighting"
+              style="height: 200px; object-fit: cover"
+            />
+            <div
+              class="card-body text-center dark text-light rounded d-flex align-items-center justify-content-center"
+              style="height: 50px"
+            >
+              <h5 class="mb-0 p-2">Find Ideas</h5>
+            </div>
+          </div>
+          <!-- Additional Cards -->
+          <div class="product-card mx-1" style="height: 250px">
+            <img
+              src="https://storage.googleapis.com/a1aa/image/6SZVnJvfpXyBUarMBPMDSAo495amlg88V3fEvifSTJVnOFYnA.jpg"
+              class="product-img rounded"
+              alt="Additional card"
+              style="height: 200px; object-fit: cover"
+            />
+            <div
+              class="card-body text-center dark text-light rounded d-flex align-items-center justify-content-center"
+              style="height: 50px"
+            >
+              <h5 class="mb-0 p-2">More Products</h5>
+            </div>
+          </div>
+          <div class="product-card mx-1" style="height: 250px">
+            <img
+              src="https://storage.googleapis.com/a1aa/image/WPNJNIiEHeVfMEbjWi7fAwaXjRVLFXFQoasnRVBJZJBkOFYnA.jpg"
+              class="product-img"
+              alt="Additional card"
+              style="height: 200px; object-fit: cover"
+            />
+            <div
+              class="card-body text-center dark text-light rounded d-flex align-items-center justify-content-center"
+              style="height: 50px"
+            >
+              <h5 class="mb-0 p-2">More Ideas</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-5 text-center d-block d-sm-none">
+        <img
+          src="./Images/home MObile/Frame 155.png"
+          alt="Centered full-width image"
+          class="img-fluid"
+        />
+      </div>
+
+      <div class="container mt-5 d-block d-sm-none">
+        <div class="row text-center">
+          <div class="col-3">
+            <div class="feature-icon">
+              <i class="bi bi-truck text-dark fs-4"></i>
+            </div>
+            <div class="feature-text">
+              <p>Fast & Free<br />Shipping</p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="feature-icon">
+              <i class="bi bi-bag text-dark fs-4"></i>
+            </div>
+            <div class="feature-text">
+              <p>Easy to<br />Shop</p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="feature-icon">
+              <i class="bi bi-arrow-repeat fs-4 text-dark"></i>
+            </div>
+            <div class="feature-text">
+              <p>Hassle Free<br />Returns</p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="feature-icon">
+              <i class="bi bi-headset fs-4 text-dark"></i>
+            </div>
+            <div class="feature-text">
+              <p>24/7<br />Support</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container my-4 d-block d-sm-none">
+        <h2 class="text-dark">Brows ideas by room</h2>
+        <div class="slider row">
+          <div class="col-6 mb-4 d-flex">
+            <a
+              href="./Items/item23.HTML"
+              class="card new-card border-0 h-100 position-relative"
+            >
+              <img
+                src="./Images/home MObile/113.png"
+                style="height: 130px"
+                class="rounded img-fluid"
+                alt="Comfortable office with plants, wooden desk, and two black chairs"
+              />
+              <div
+                style="
+                  backdrop-filter: blur(10px);
+                  background: rgba(241, 236, 236, 0.507);
+                  width: 100%;
+                  height: 30px;
+                "
+                class="card-body new-card-body text-center rounded position-absolute bottom-0 start-50 translate-middle-x d-flex align-items-center justify-content-center"
+              >
+                <p class="card-text new-card-title text-nowrap fw-bold mb-0">
+                  Office Room
+                </p>
+              </div>
+              <div class="position-absolute top-0 end-0 p-3">
+                <i class="fas fa-heart text-light fs-2"></i>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-6 mb-4 d-flex">
+            <a
+              href="./Items/item24.HTML"
+              class="card new-card border-0 h-100 position-relative"
+            >
+              <img
+                src="./Images/home MObile/Rectangle 112.png"
+                style="height: 130px"
+                class="rounded img-fluid"
+                alt="Stylish living room with modern decor"
+              />
+              <div
+                style="
+                  backdrop-filter: blur(10px);
+                  background: rgba(241, 236, 236, 0.507);
+                  width: 100%;
+                  height: 30px;
+                "
+                class="card-body new-card-body text-center rounded position-absolute bottom-0 start-50 translate-middle-x d-flex align-items-center justify-content-center"
+              >
+                <p class="card-text new-card-title text-nowrap fw-bold mb-0">
+                  Living Room
+                </p>
+              </div>
+              <div class="position-absolute top-0 end-0 p-3">
+                <i class="fas fa-heart text-light fs-2"></i>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-6 mb-4 d-flex">
+            <a
+              href="./Items/item25.HTML"
+              class="card new-card border-0 h-100 position-relative"
+            >
+              <img
+                src="./Images/home MObile/113.png"
+                style="height: 130px"
+                class="rounded img-fluid"
+                alt="Elegant bedroom with soft lighting"
+              />
+              <div
+                style="
+                  backdrop-filter: blur(10px);
+                  background: rgba(241, 236, 236, 0.507);
+                  width: 100%;
+                  height: 30px;
+                "
+                class="card-body new-card-body text-center rounded position-absolute bottom-0 start-50 translate-middle-x d-flex align-items-center justify-content-center"
+              >
+                <p class="card-text new-card-title text-nowrap fw-bold mb-0">
+                  Bedroom
+                </p>
+              </div>
+              <div class="position-absolute top-0 end-0 p-3">
+                <i class="fas fa-heart text-light fs-2"></i>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-6 mb-4 d-flex">
+            <a
+              href="./Items/item26.HTML"
+              class="card new-card border-0 h-100 position-relative"
+            >
+              <img
+                src="./Images/home MObile/Rectangle 112.png"
+                style="height: 130px"
+                class="rounded img-fluid"
+                alt="Modern bathroom with elegant fixtures"
+              />
+              <div
+                style="
+                  backdrop-filter: blur(10px);
+                  background: rgba(241, 236, 236, 0.507);
+                  width: 100%;
+                  height: 30px;
+                "
+                class="card-body new-card-body text-center rounded position-absolute bottom-0 start-50 translate-middle-x d-flex align-items-center justify-content-center"
+              >
+                <p class="card-text new-card-title text-nowrap fw-bold mb-0">
+                  Bathroom
+                </p>
+              </div>
+              <div class="position-absolute top-0 end-0 p-3">
+                <i class="fas fa-heart text-light fs-2"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container d-block d-sm-none">
+        <h2 class="text-dark">Browse Photos by Style</h2>
+        <div class="d-flex gap-2">
+          <!-- Used g-3 for spacing between columns -->
+          <div class="col-6 position-relative overflow-hidden p-0">
+            <img
+              src="./Images/home MObile/Rectangle 77.png"
+              class="rounded img-fluid w-100"
+              alt="Modern bathroom with elegant fixtures"
+            />
+            <div
+              class="overlay d-flex align-items-center justify-content-center position-absolute bottom-0 w-100 rounded"
+              style="
+                height: 40px;
+                backdrop-filter: blur(10px);
+                background: rgba(241, 236, 236, 0.507);
+              "
+            >
+              <p class="new-card-title text-nowrap fw-bold mb-0">Bathroom</p>
+            </div>
+            <div class="position-absolute top-0 end-0 p-2">
+              <i class="bi bi-heart-fill text-light fs-4"></i>
+              <!-- Bootstrap Heart Icon -->
+            </div>
+          </div>
+
+          <div class="col-6 position-relative overflow-hidden p-0">
+            <img
+              src="./Images/home MObile/Rectangle 81.png"
+              class="rounded img-fluid w-100"
+              alt="Modern bathroom with elegant fixtures"
+            />
+            <div
+              class="overlay d-flex align-items-center justify-content-center position-absolute bottom-0 w-100 rounded"
+              style="
+                height: 40px;
+                backdrop-filter: blur(10px);
+                background: rgba(241, 236, 236, 0.507);
+              "
+            >
+              <p class="new-card-title text-nowrap fw-bold mb-0">Office Room</p>
+            </div>
+            <div class="position-absolute top-0 end-0 p-2">
+              <i class="bi bi-heart-fill text-light fs-4"></i>
+              <!-- Bootstrap Heart Icon -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-block d-sm-none container">
+        <div class="container my-5">
+          <div class="row">
+            <div class="col-12 my-3">
+              <div
+                class="row"
+                style="background-color: #d9d9d5; border: 1px solid black"
+                class="text-dark rounded-3 p-2"
+              >
+                <div
+                  class="col-6 d-flex flex-column justify-content-between px-4 text-dark p-3"
+                >
+                  <h5 class="card-title">New Collection</h5>
+                  <p class="card-text">
+                    Eclipse Coffee Table Nordic Dining Table Rustic Farmhouse
+                    Table Modern Glass Table Classic Wooden Console.
+                  </p>
+                  <button class="btn btn-warning mt-2" style="display: block">
+                    View all
+                  </button>
+                </div>
+                <div class="col-6 d-flex align-items-center">
+                  <img
+                    class="img-fluid rounded"
+                    src="./Images/table.png"
+                    alt="table image"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 my-3">
+              <div
+                class="row"
+                style="background-color: #d9d9d5; border: 1px solid black"
+                class="text-dark rounded-3 p-2"
+              >
+                <div
+                  class="col-6 d-flex flex-column justify-content-between px-4 text-dark p-3"
+                >
+                  <h5 class="card-title">Aura Touch Lamp</h5>
+                  <p class="card-text">
+                    Luxe Table Lamp Edison Glow Lamp Rustic Copper Lamp Modern
+                    Arc Lamp.
+                  </p>
+                  <button class="btn btn-warning mt-2" style="display: block">
+                    View all
+                  </button>
+                </div>
+                <div class="col-6 d-flex align-items-center">
+                  <img
+                    class="img-fluid rounded"
+                    src="./Images/lamp.png"
+                    alt="lamp image"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 my-3">
+              <div
+                class="row"
+                style="background-color: #d9d9d5; border: 1px solid black"
+                class="text-dark rounded-3 p-4"
+              >
+                <div
+                  class="col-6 d-flex flex-column justify-content-between px-4 text-dark p-3"
+                >
+                  <h5 class="card-title">Aura Touch Lamp</h5>
+                  <p class="card-text">
+                    Velvet Comfort Chair Nordic Relax Chair Eclipse Swivel Chair
+                    Metro Dining Chair Urban Chic Armchair.
+                  </p>
+                  <button class="btn btn-warning mt-2" style="display: block">
+                    View all
+                  </button>
+                </div>
+                <div class="col-6 d-flex align-items-center">
+                  <img
+                    class="img-fluid rounded"
+                    src="./Images/sofa.png"
+                    alt="sofa image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <section class="hero-section dark pt-1 d-none d-sm-block">
+        <div class="container">
+          <div class="row justify-content-between mt-5 align-items-center">
+            <!-- Left Content -->
+            <div class="col-lg-6">
+              <div class="hero-content">
+                <div class="hero-badge">
+                  <span class="badge-text">House interior design</span>
+                </div>
+                
+                <h1 class="hero-title">
+                  Transform Your
+                  <div class="title-highlight">
+                    <span class="gradient-text">Living Space</span>
+                  </div>
+                  Into Art
+                </h1>
+
+                <p class="hero-description">
+                  Discover elegant furniture and interior design solutions that bring 
+                  your dream home to life. Expert craftsmanship meets modern style.
+                </p>
+
+                <div class="hero-buttons">
+                  <a href="#services" class="btn-primary">
+                    Explore Services
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                  <a href="#portfolio" class="btn-outline">
+                    View Portfolio
+                    <i class="bi bi-grid-3x3-gap"></i>
+                  </a>
+                </div>
+
+                <!-- Stats Counter -->
+                <div class="stats-wrapper">
+                  <div class="stats-container">
+                    <div class="stat-item">
+                      <div class="stat-value-wrapper">
+                        <span class="stat-number">5000</span>
+                        <span class="stat-plus" style="opacity: 0;">+</span>
+                      </div>
+                      <p class="stat-label">Unique Designs</p>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                      <div class="stat-value-wrapper">
+                        <span class="stat-number">2500</span>
+                        <span class="stat-plus" style="opacity: 0;">+</span>
+                      </div>
+                      <p class="stat-label">Happy Clients</p>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                      <div class="stat-value-wrapper">
+                        <span class="stat-number">2500</span>
+                        <span class="stat-plus" style="opacity: 0;">+</span>
+                      </div>
+                      <p class="stat-label">Projects Done</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="col-lg-6">
+              <div class="hero-images">
+                <div class="image-wrapper image-main">
+                  <img
+                    src="./images/hero-img1.png"
+                    alt="Modern interior design showcase"
+                    class="hero-img-1"
+                  />
+                </div>
+                <div class="image-wrapper image-accent">
+                  <img
+                    src="./images/hero-img2.png"
+                    alt="Furniture detail"
+                    class="hero-img-2"
+                  />
+                </div>
+                <div class="floating-card">
+                  <div class="card-icon">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title">Premium Design</span>
+                    <span class="card-subtitle">Top-rated Service</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <div class="features-section d-none d-md-block">
+        <div class="container">
+          <div class="row g-4">
+            <!-- Fast Shipping -->
+            <div class="col-6 col-lg-3">
+              <div class="feature-card">
+                <div class="feature-icon-wrap">
+                  <div class="feature-icon">
+                    <i class="bi bi-truck"></i>
+                  </div>
+                </div>
+                <div class="feature-content">
+                  <h4>Fast & Free</h4>
+                  <p>Shipping</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Easy Shopping -->
+            <div class="col-6 col-lg-3">
+              <div class="feature-card">
+                <div class="feature-icon-wrap">
+                  <div class="feature-icon">
+                    <i class="bi bi-bag-check"></i>
+                  </div>
+                </div>
+                <div class="feature-content">
+                  <h4>Easy to</h4>
+                  <p>Shop</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 24/7 Support -->
+            <div class="col-6 col-lg-3">
+              <div class="feature-card">
+                <div class="feature-icon-wrap">
+                  <div class="feature-icon">
+                    <i class="bi bi-headset"></i>
+                  </div>
+                </div>
+                <div class="feature-content">
+                  <h4>24/7</h4>
+                  <p>Support</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Returns -->
+            <div class="col-6 col-lg-3">
+              <div class="feature-card">
+                <div class="feature-icon-wrap">
+                  <div class="feature-icon">
+                    <i class="bi bi-arrow-repeat"></i>
+                  </div>
+                </div>
+                <div class="feature-content">
+                  <h4>Hassle Free</h4>
+                  <p>Returns</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="d-none d-sm-block">
+      <div class="container product-showcase my-5">
+        <div class="row">
+          <!-- left sec -->
+          <div class="col-sm-12 col-md-6 col-lg-6 my-3">
+            <div class="product-card-horizontal d-flex justify-content-between align-items-center">
+              <div class="product-info p-4">
+                <h5 class="product-title">New collection</h5>
+                <p class="product-description">
+                  Eclipse Coffee Table Nordic Dining Table Rustic Farmhouse
+                  Table Modern Glass Table Classic Wooden Console.
+                </p>
+                <a href="#" class="view-btn">View all</a>
+              </div>
+              <div class="product-image-wrapper">
+                <img class="product-image" src="./Images/table.png" alt="Modern table collection" />
+              </div>
+            </div>
+
+            <div class="product-card-horizontal d-flex justify-content-between align-items-center mt-4">
+              <div class="product-info p-4">
+                <h5 class="product-title">Aura Touch Lamp</h5>
+                <p class="product-description">
+                  Luxe Table Lamp Edison Glow Lamp Rustic Copper Lamp Modern Arc
+                  Lamp.
+                </p>
+                <a href="#" class="view-btn">View all</a>
+              </div>
+              <div class="product-image-wrapper">
+                <img class="product-image" src="./Images/lamp.png" alt="Aura Touch Lamp collection" />
+              </div>
+            </div>
+          </div>
+
+          <!-- right sec -->
+          <div class="col-sm-12 col-md-5 col-lg-5 my-3">
+            <div class="product-card-vertical">
+              <div class="product-info p-4">
+                <h5 class="product-title">Comfort Seating</h5>
+                <p class="product-description">
+                  Velvet Comfort Chair Nordic Relax Chair Eclipse Swivel Chair
+                  Metro Dining Chair Urban Chic Armchair
+                </p>
+                <a href="#" class="view-btn">View all</a>
+              </div>
+              <div class="product-image-wrapper-large">
+                <img class="product-image" src="./Images/sofa.png" alt="Comfort seating collection" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- categories -->
+     <div class="featured-section  d-none d-sm-block">
+
+       <div class="container">
+         <h2 class="section-title mb-4">
+           Featured Categories
+           <div class="section-title-line"></div>
+         </h2>
+         <div class="row justify-content-between mt-5">
+           <!-- Category 1 -->
+           <div class="col-sm-6 col-md-4 col-lg-2 mt-2">
+             <div class="category-card text-center">
+               <div class="category-image-wrapper">
+                 <img
+                   class="category-image"
+                   src="./images-2/img-1.png"
+                   alt="Pillow"
+                 />
+               </div>
+               <h5 class="category-title">Pillow</h5>
+               <p class="category-count">Discover 110 products</p>
+             </div>
+           </div>
+   
+           <!-- Category 2 -->
+           <div class="col-sm-6 col-md-4 col-lg-2 mt-2">
+             <div class="category-card text-center">
+               <div class="category-image-wrapper">
+                 <img
+                   class="category-image"
+                   src="./Images/item.png"
+                   alt="Dinner Table"
+                 />
+               </div>
+               <h5 class="category-title">Dinner Table</h5>
+               <p class="category-count">Discover 110 products</p>
+             </div>
+           </div>
+   
+           <!-- Category 3 -->
+           <div class="col-sm-6 col-md-4 col-lg-2 mt-2">
+             <div class="category-card text-center">
+               <div class="category-image-wrapper">
+                 <img
+                   class="category-image"
+                   src="./images-2/img-3.png"
+                   alt="Pillow"
+                 />
+               </div>
+               <h5 class="category-title">Beautiful Lamp</h5>
+               <p class="category-count">Discover 110 products</p>
+             </div>
+           </div>
+   
+           <!-- Category 4 -->
+           <div class="col-sm-6 col-md-4 col-lg-2 mt-2">
+             <div class="category-card text-center">
+               <div class="category-image-wrapper">
+                 <img
+                   class="category-image"
+                   src="./Images/item-4.png"
+                   alt="Lamp"
+                 />
+               </div>
+               <h5 class="category-title">Lamp</h5>
+               <p class="category-count">Discover 110 products</p>
+             </div>
+           </div>
+   
+           <!-- Category 5 -->
+           <div class="col-sm-6 col-md-4 col-lg-2 mt-2">
+             <div class="category-card text-center">
+               <div class="category-image-wrapper">
+                 <img
+                   class="category-image"
+                   src="./Images/item-5.png"
+                   alt="Arm Chair"
+                 />
+               </div>
+               <h5 class="category-title">Arm Chair</h5>
+               <p class="category-count">Discover 110 products</p>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+    <div class="container my-5 d-none d-sm-flex align-items-center trending-section">
+      <div class="trending-header position-relative">
+        <h2 class="display-5 fw-bold">
+          Trending Products
+          <span class="text-warning d-block">For You!</span>
+        </h2>
+        <div class="trending-decoration"></div>
+      </div>
+    </div>
+
+    <ul class="container justify-content-center align-items-center gap-4 py-3 room-categories d-none d-md-flex">
+      <li class="list-unstyled category-item active">Living room</li>
+      <li class="list-unstyled category-item">Bed room</li>
+      <li class="list-unstyled category-item">Dining room</li>
+      <li class="list-unstyled category-item">Out door</li>
+      <li class="list-unstyled category-item">Indoor</li>
+    </ul>
+
+    <!-- Cards Section -->
+
+    <div class="container mt-3 d-none d-sm-block">
+      <div class="row justify-content-center">
+        <div class="row justify-content-center mt-3">
+          <!-- Card 1 -->
+          <div class="col-md-4 mb-4">
+            <div
+              class="border border-1 rounded position-relative"
+              style="height: 100%"
+            >
+              <div class="p-3">
+                <img
+                  src="./Images/card-1.png"
+                  class="selected-item-1 img-fluid rounded-3 card-img-top"
+                  alt="Comfortable Sofa"
+                />
+                <i
+                  class="bi bi-heart position-absolute start-0 top-0 fs-2 ms-2 mt-2 text-warning"
+                ></i>
+              </div>
+              <div class="p-3 h-hs-bg text-white rounded">
+                <p>Comfortable Sofa</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price">$50.5</span>
+                  <img
+                    class="bg-warning rounded-circle p-1 add-to-cart"
+                    src="./images-2/cart.png"
+                    alt=""
+                    onclick="addToCart('Comfortable Sofa', 50.5, './Images/card-1.png')"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-4 mb-4">
+            <div
+              class="border border-1 rounded position-relative"
+              style="height: 100%"
+            >
+              <div class="p-3 card-bg">
+                <img
+                  src="./Images/lamp.png"
+                  class="selected-item-1 img-fluid rounded-3 card-img-top"
+                  alt="Beautiful Lamp"
+                />
+                <i
+                  class="bi bi-heart position-absolute start-0 top-0 fs-2 ms-2 mt-2 text-warning"
+                ></i>
+              </div>
+              <div class="p-3 h-hs-bg text-white rounded">
+                <p>Beautiful Lamp</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price">$30.0</span>
+                  <img
+                    class="bg-warning rounded-circle p-1 add-to-cart"
+                    src="./images-2/cart.png"
+                    alt=""
+                    onclick="addToCart('Beautiful Lamp', 30.0, './Images/lamp.png')"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4 mb-4">
+            <div
+              class="border border-1 rounded position-relative"
+              style="height: 100%"
+            >
+              <div class="p-3 card-bg">
+                <img
+                  src="./Images/card-3.png"
+                  class="selected-item-1 img-fluid rounded-3 card-img-top"
+                  alt="Comfortable Sofa"
+                />
+                <i
+                  class="bi bi-heart position-absolute start-0 top-0 fs-2 ms-2 mt-2 text-warning"
+                ></i>
+              </div>
+              <div class="p-3 h-hs-bg text-white rounded">
+                <p>Comfortable Sofa</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price">$50.5</span>
+                  <img
+                    class="bg-warning rounded-circle p-1 add-to-cart"
+                    src="./images-2/cart.png"
+                    alt=""
+                    onclick="addToCart('Comfortable Sofa', 50.5, './Images/card-3.png')"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-md-4 mb-4">
+            <div
+              class="border border-1 rounded position-relative"
+              style="height: 100%"
+            >
+              <div class="p-3 card-bg">
+                <img
+                  src="./Images/card-4.png"
+                  class="selected-item-1 img-fluid rounded-3 card-img-top"
+                  alt="Soft Pillow"
+                />
+                <i
+                  class="bi bi-heart position-absolute start-0 top-0 fs-2 ms-2 mt-2 text-warning"
+                ></i>
+              </div>
+              <div class="p-3 h-hs-bg text-white rounded">
+                <p>Soft Pillow</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price">$10.5</span>
+                  <img
+                    class="bg-warning rounded-circle p-1 add-to-cart"
+                    src="./images-2/cart.png"
+                    alt=""
+                    onclick="addToCart('Soft Pillow', 10.5, './Images/card-4.png')"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="col-md-4 mb-4">
+            <div
+              class="border border-1 rounded position-relative"
+              style="height: 100%"
+            >
+              <div class="p-3 card-bg">
+                <img
+                  src="./Images/card-5.png"
+                  class="selected-item-1 img-fluid rounded-3 card-img-top"
+                  alt="Pillows on Bed Set"
+                />
+                <i
+                  class="bi bi-heart position-absolute start-0 top-0 fs-2 ms-2 mt-2 text-warning"
+                ></i>
+              </div>
+              <div class="p-3 h-hs-bg text-white rounded">
+                <p>Pillows on Bed Set</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price">$10.5</span>
+                  <img
+                    class="bg-warning rounded-circle p-1 add-to-cart"
+                    src="./images-2/cart.png"
+                    alt=""
+                    onclick="addToCart('Pillows on Bed Set', 10.5, './Images/card-5.png')"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="col-md-4 mb-4">
+            <div
+              class="border border-1 rounded position-relative"
+              style="height: 100%"
+            >
+              <div class="p-3 card-bg">
+                <img
+                  src="./images-2/img-8.png"
+                  class="selected-item-1 img-fluid rounded-3 card-img-top"
+                  alt="Soft Teal Ottoman"
+                />
+                <i
+                  class="bi bi-heart position-absolute start-0 top-0 fs-2 ms-2 mt-2 text-warning"
+                ></i>
+              </div>
+              <div class="p-3 h-hs-bg text-white rounded">
+                <p>Soft Teal Ottoman</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price">$20.5</span>
+                  <img
+                    class="bg-warning rounded-circle p-1 add-to-cart"
+                    src="./images-2/cart.png"
+                    alt=""
+                    onclick="addToCart('Soft Teal Ottoman', 20.5, './Images/card-6.png')"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <section class=" mt-5 d-none d-md-block">
+
+
+      <div class="h-hs-bg text-white py-5 mt-5">
+          <div class="container">
+            <h2 class="text-center">Furniture Haven</h2>
+            <hr />
+      
+            <div class="row justify-content-between d-flex flex-column flex-md-row text-center text-md-start">
+              <ul class="col-12 col-md-2 mb-3 mb-md-0 ms-3">
+                <h4>About</h4>
+                <li class="list-unstyled">Our company</li>
+                <li class="list-unstyled my-2">Our Story</li>
+                <li class="list-unstyled">Blog</li>
+              </ul>
+      
+              <ul class="col-12 col-md-2 mb-3 mb-md-0">
+                <h4>Information</h4>
+                <li class="list-unstyled">Delivery Information</li>
+                <li class="list-unstyled my-2">Privacy Policy</li>
+                <li class="list-unstyled">Terms & Conditions</li>
+                <li class="list-unstyled mt-2">Returns</li>
+              </ul>
+      
+              <ul class="col-12 col-md-2 mb-3 mb-md-0">
+                <h4>Support</h4>
+                <li class="list-unstyled">Contact Us</li>
+                <li class="list-unstyled my-2">Help</li>
+                <li class="list-unstyled">FAQ</li>
+                <li class="list-unstyled mt-2">Checkout</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- small screen -->
+      <section class="d-block d-md-none"> <!-- Show on mobile screens only -->
+        <div class="h-hs-bg text-white py-5 mt-5">
+          <div class="container">
+            <h2 class="text-center">Furniture Haven</h2>
+            <hr />
+      
+            <div class="row d-flex justify-content-center text-center text-md-start">
+              <ul class="col-4 mb-3">
+                <h4>About</h4>
+                <li class="list-unstyled">Our company</li>
+                <li class="list-unstyled my-2">Our Story</li>
+                <li class="list-unstyled">Blog</li>
+              </ul>
+      
+              <ul class="col-4 mb-3">
+                <h4>Information</h4>
+                <li class="list-unstyled">Delivery Information</li>
+                <li class="list-unstyled my-2">Privacy Policy</li>
+                <li class="list-unstyled">Terms & Conditions</li>
+                <li class="list-unstyled mt-2">Returns</li>
+              </ul>
+      
+              <ul class="col-4 mb-3">
+                <h4>Support</h4>
+                <li class="list-unstyled">Contact Us</li>
+                <li class="list-unstyled my-2">Help</li>
+                <li class="list-unstyled">FAQ</li>
+                <li class="list-unstyled mt-2">Checkout</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    
+    
+
+    <script>
+      function animateCounter() {
+          const counters = document.querySelectorAll('.stat-number');
+          
+          function startCounting(counter, index) {
+              const target = parseInt(counter.textContent);
+              let current = 0;
+              
+              // Add initial styling
+              counter.style.opacity = '0';
+              counter.style.transform = 'translateY(20px)';
+              
+              // Delay each counter's start based on its index
+              setTimeout(() => {
+                  // Fade in the counter
+                  counter.style.transition = 'opacity 0.5s, transform 0.5s';
+                  counter.style.opacity = '1';
+                  counter.style.transform = 'translateY(0)';
+                  
+                  // Start counting
+                  const interval = setInterval(() => {
+                      if (current < target) {
+                          current += 1;
+                          counter.textContent = current.toLocaleString();
+                      } else {
+                          clearInterval(interval);
+                          // Add the plus sign after counting is done
+                          counter.nextElementSibling.style.opacity = '1';
+                      }
+                  }, 1); // Adjust speed here (lower number = faster counting)
+                  
+              }, index * 1000); // Each counter starts 1 second after the previous one
+          }
+
+          // Start animation when elements are in viewport
+          const observer = new IntersectionObserver((entries) => {
+              if (entries[0].isIntersecting) {
+                  counters.forEach((counter, index) => {
+                      startCounting(counter, index);
+                  });
+                  observer.disconnect();
+              }
+          }, { threshold: 0.5 });
+
+          observer.observe(counters[0]);
+      }
+
+      // Initialize counter animation on page load
+      document.addEventListener('DOMContentLoaded', () => {
+          animateCounter();
+      });
+    </script>
+
+    <script src="./index.js"></script>
+    <script src="billing.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- Slick Slider Initialization Script 1 -->
+    <script>
+      $(document).ready(function () {
+        $("#cardSlider").slick({
+          slidesToShow: 3, // Show 3 cards at a time
+          slidesToScroll: 2, // Scroll one card at a time
+          infinite: true, // Infinite scroll
+          arrows: false, // Hide navigation arrows
+          dots: false, // Hide dots
+          autoplay: true, // Disable autoplay
+          centerMode: false, // Keep centered mode off
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 3, // Show 1 card at a time on small screens
+              },
+            },
+          ],
+        });
+      });
+    </script>
+
+    <!-- Slick Slider Initialization Script 2 -->
+    <script>
+      $(document).ready(function () {
+        $(".slider").slick({
+          slidesToShow: 2, // Show 2 cards at a time
+          slidesToScroll: 1,
+          dots: false,
+          autoplay: true,
+          infinite: true, // Set to false for not looping back to the start
+          arrows: false, // Add navigation arrows
+          responsive: [
+            {
+              breakpoint: 768, // Adjust settings for smaller screens
+              settings: {
+                slidesToShow: 2, // Show 1 card on smaller screens
+              },
+            },
+          ],
+        });
+      });
+    </script>
+
+    <!-- Add to cart enhancement -->
+    <script>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function addToCart(name, price, image) {
+        // Check if item already exists in cart
+        const existingItem = cart.find(item => item.name === name);
+        
+        if (existingItem) {
+            // If item exists, increment quantity
+            existingItem.quantity += 1;
+        } else {
+            // If item doesn't exist, add new item
+            cart.push({
+                name: name,
+                price: price,
+                image: image,
+                quantity: 1
+            });
+        }
+        
+        // Save to localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+        
+        // Update UI
+        updateCartCount();
+        showToast(name);
+    }
+
+    function updateCartCount() {
+        const count = cart.reduce((total, item) => total + item.quantity, 0);
+        const badge = document.querySelector('.badge');
+        if (badge) {
+            badge.textContent = count;
+        }
+    }
+
+    function showToast(name) {
+        // Create toast element
+        const toast = document.createElement('div');
+        toast.className = 'toast-notification';
+        toast.innerHTML = `
+            <div class="toast-content">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>${name} added to cart!</span>
+            </div>
+        `;
+        
+        // Add toast to document
+        document.body.appendChild(toast);
+        
+        // Remove toast after animation
+        setTimeout(() => {
+            toast.remove();
+        }, 3000);
+    }
+
+    // Initialize cart count on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        updateCartCount();
+    });
+    </script>
+
+    <!-- Add loading optimization -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Defer non-critical images
+      const images = document.querySelectorAll('img[loading="lazy"]');
+      if ('loading' in HTMLImageElement.prototype) {
+        images.forEach(img => {
+          img.src = img.dataset.src;
+        });
+      } else {
+        // Fallback for browsers that don't support lazy loading
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+        document.body.appendChild(script);
+      }
+    });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+          console.log('Image path:', img.src);
+          console.log('Image complete:', img.complete);
+          console.log('Image naturalWidth:', img.naturalWidth);
+          
+          img.addEventListener('load', function() {
+            console.log('Image loaded successfully:', img.src);
+          });
+          
+          img.addEventListener('error', function() {
+            console.error('Image failed to load:', img.src);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

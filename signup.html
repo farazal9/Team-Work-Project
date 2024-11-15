@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 d-flex flex-column justify-content-center form-section">
+                <h2 class="text-center mb-4">Sign up</h2>
+                <form id="signup-form">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control bg-light" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control bg-light" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control bg-light" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-check mb-4">
+                        <input type="checkbox" class="form-check-input" id="policies" required>
+                        <label class="form-check-label" for="policies">Accept all policies</label>
+                    </div>
+
+                    <div class="text-center mb-4">
+                        <p>With Social Media</p>
+                        <a href="#"><img width="50" class="img-fluid mx-2" src="./Images/insta.png" alt="Instagram"></a>
+                        <a href="#"><img width="50" class="img-fluid mx-2" src="./Images/google.png" alt="Google"></a>
+                        <a href="#"><img width="50" class="img-fluid mx-2" src="./Images/fb.png" alt="Facebook"></a>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary px-4 py-2 mb-3">Sign Up</button>
+                        <p class="mt-2">Have an account? <a href="login.html">Login</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 d-none d-md-flex justify-content-center">
+                <img src="./Images/signup page.png" alt="Workshop" class="img-fluid rounded" style="height: 100%; max-height: 600px;">
+            </div>
+        </div>
+    </div>
+
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

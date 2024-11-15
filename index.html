@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="./index.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+  <!-- 
+     ======================
+     HEADER MENU 
+     ======================
+      -->
+
+  <nav class="navbar navbar-expand-lg dark">
+    <div class="container">
+      <div class="d-flex flex-column">
+        <h2 class="header-icon text-light fw-bold my-0">
+          <i>Furniture Haven</i>
+        </h2>
+        <span class="text-light">interior design</span>
+      </div>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto my-2">
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" href="./homePage.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light mx-sm-3" href="./index.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="./about-us.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light mx-sm-3" href="./contact-us.html">Contact Us</a>
+          </li>
+          <li class="nav-item dropdown" id="servicesDropdown">
+            <a
+              class="nav-link text-light dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              aria-expanded="false"
+            >
+              Our Services
+            </a>
+            <ul class="dropdown-menu animate slideIn" aria-labelledby="servicesDropdown">
+              <li>
+                <a class="dropdown-item d-flex align-items-center gap-2" href="./services-1.html">
+                  <i class="bi bi-house-gear"></i>
+                  Interior Design
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center gap-2" href="./services/index.html">
+                  <i class="bi bi-rulers"></i>
+                  Space Planning
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="nav-icons d-flex align-items-center gap-4">
+          <div class="icon-wrapper" id="popoverIcon">
+            <i class="bi bi-person-circle text-light fs-5"></i>
+          </div>
+          <a class="icon-wrapper text-decoration-none position-relative" href="./addToCart.html">
+            <i class="bi bi-bag text-light fs-5"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+              0
+              <span class="visually-hidden">items in cart</span>
+            </span>
+          </a>
+          <div class="search-wrapper">
+            <div class="search-toggle icon-wrapper">
+              <i class="bi bi-search text-light fs-5"></i>
+            </div>
+            <div class="cool-search-box d-none">
+              <div class="search-inner">
+                <input type="text" placeholder="Search here...">
+                <button class="search-submit">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+              <div class="search-suggestions">
+                <div class="suggestion-header">Popular Searches</div>
+                <div class="suggestion-item">Modern Sofa</div>
+                <div class="suggestion-item">Dining Table</div>
+                <div class="suggestion-item">Bedroom Set</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 
+     ======================
+     SHOP MENU 
+     ======================
+      -->
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="d-flex d-md-none mb-4">
+        <!-- All Filters Dropdown -->
+        <div class="dropdown me-2">
+          <a class="btn border border-1 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="bi bi-funnel-fill"></i> All Filters
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Sofa</a></li>
+            <li><a class="dropdown-item" href="#">Bedroom</a></li>
+            <li><a class="dropdown-item" href="#">Living Room</a></li>
+            <li><a class="dropdown-item" href="#">Office</a></li>
+          </ul>
+        </div>
+
+        <!-- Price Filter Dropdown -->
+        <div class="dropdown me-2">
+          <a class="btn border border-1 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Price
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Under $500</a></li>
+            <li><a class="dropdown-item" href="#">$500 - $1000</a></li>
+            <li><a class="dropdown-item" href="#">$1000 - $2000</a></li>
+            <li><a class="dropdown-item" href="#">Above $2000</a></li>
+          </ul>
+        </div>
+
+        <!-- Color Filter Dropdown -->
+        <div class="dropdown me-2">
+          <a class="btn border border-1 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Color
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Red</a></li>
+            <li><a class="dropdown-item" href="#">Blue</a></li>
+            <li><a class="dropdown-item" href="#">Green</a></li>
+            <li><a class="dropdown-item" href="#">White</a></li>
+            <li><a class="dropdown-item" href="#">Black</a></li>
+          </ul>
+        </div>
+
+        <!-- Style Filter Dropdown -->
+        <div class="dropdown">
+          <a class="btn border border-1 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Style
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Modern</a></li>
+            <li><a class="dropdown-item" href="#">Classic</a></li>
+            <li><a class="dropdown-item" href="#">Contemporary</a></li>
+            <li><a class="dropdown-item" href="#">Minimalist</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-3 d-none d-md-block">
+        <div>
+          <h3>Filter Option</h3>
+        </div>
+
+        <!-- Categories Filter with Checkboxes -->
+        <div style="margin-top: 40px" class="border border-1 p-2 py-3">
+          <h4>Categories</h4>
+          <ul class="list-unstyled">
+            <li class="fs-5">
+              <input type="checkbox" id="living-room" class="me-2" />
+              <label for="living-room">Living Room</label>
+            </li>
+            <li class="fs-5">
+              <input type="checkbox" id="bedroom" class="me-2" />
+              <label for="bedroom">Bedroom</label>
+            </li>
+            <li class="fs-5">
+              <input type="checkbox" id="dining-room" class="me-2" />
+              <label for="dining-room">Dining Room</label>
+            </li>
+            <li class="fs-5">
+              <input type="checkbox" id="office" class="me-2" />
+              <label for="office">Office</label>
+            </li>
+            <li class="fs-5">
+              <input type="checkbox" id="outdoor" class="me-2" />
+              <label for="outdoor">Outdoor</label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Material Filter with Checkboxes -->
+        <div class="border border-1 p-2 py-3 mt-5">
+          <h4>Material Filter</h4>
+          <ul class="list-unstyled">
+            <li class="fs-5">
+              <input type="checkbox" id="wood" class="me-2" />
+              <label for="wood">Wood</label>
+            </li>
+            <li class="fs-5">
+              <input type="checkbox" id="metal" class="me-2" />
+              <label for="metal">Metal</label>
+            </li>
+            <li class="fs-5">
+              <input type="checkbox" id="glass" class="me-2" />
+              <label for="glass">Glass</label>
+            </li>
+            <li class="fs-5">
+              <input type="checkbox" id="fabric" class="me-2" />
+              <label for="fabric">Fabric</label>
+            </li>
+            <li class="fs-5">
+              <input type="checkbox" id="leather" class="me-2" />
+              <label for="leather">Leather</label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Price Filter with Radio Buttons -->
+        <div class="border border-1 p-2 py-3 mt-5">
+          <h4>Price Filter</h4>
+          <ul class="list-unstyled">
+            <li class="fs-5">
+              <input type="radio" name="price" id="under-100" class="me-2" />
+              <label for="under-100">Under $100</label>
+            </li>
+            <li class="fs-5">
+              <input type="radio" name="price" id="100-500" class="me-2" />
+              <label for="100-500">$100 - $500</label>
+            </li>
+            <li class="fs-5">
+              <input type="radio" name="price" id="500-1000" class="me-2" />
+              <label for="500-1000">$500 - $1,000</label>
+            </li>
+            <li class="fs-5">
+              <input type="radio" name="price" id="1000-2000" class="me-2" />
+              <label for="1000-2000">$1,000 - $2,000</label>
+            </li>
+            <li class="fs-5">
+              <input type="radio" name="price" id="above-2000" class="me-2" />
+              <label for="above-2000">Above $2,000</label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Color Filter with Checkboxes -->
+        <div class="border border-1 p-2 mt-5 py-3">
+          <h4>Color</h4>
+          <ul class="list-unstyled">
+            <li class="fs-5">
+              <input type="checkbox" id="black" class="me-2" />
+              <label for="black">Black</label>
+            </li>
+            <li class="fs-5">
+              <input type="checkbox" id="white" class="me-2" />
+              <label for="white">White</label>
+            </li>
+            <li class="fs-5">
+              <input type="checkbox" id="brown" class="me-2" />
+              <label for="brown">Brown</label>
+            </li>
+            <li class="fs-5">
+              <input type="checkbox" id="grey" class="me-2" />
+              <label for="grey">Grey</label>
+            </li>
+            <li class="fs-5">
+              <input type="checkbox" id="custom" class="me-2" />
+              <label for="custom">Custom</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Product Cards Section -->
+      <div class="col-md-9">
+        <!-- Top Section: Sorting and Result Count -->
+        <div class="d-flex justify-content-between align-items-center">
+          <h3>Show 300 Results</h3>
+          <div class="d-flex">
+            <!-- Default Sorting Dropdown -->
+            <div class="dropdown me-2">
+              <a class="btn border border-1 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Default sorting
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Size Sorting Dropdown -->
+            <div class="dropdown">
+              <a class="btn border border-1 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Size
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Cards -->
+
+        <div class="container mt-5">
+
+          <div class="row g-1 mt-2" id="product-cards">
+            <div class="col-4">
+              <div class="border border-1 rounded position-relative card-container">
+                <div class="p-3 card-bg-2">
+                  <img src="./images-2/img-2.png" data-url="./productsFiles/reveiw.html"
+                    class="selected-item-1 img-fluid card-img-top" alt="Comfortable Sofa" />
+                  <i class="bi bi-heart position-absolute start-0 top-0 fs-2 ms-2 mt-2 text-warning"></i>
+                  <img class="bg-warning rounded-circle position-absolute end-0 bottom-0 me-2 mb-2"
+                    src="./images-2/cart.png" alt="Cart" style="padding: 2px; width: 30px; height: 30px;"
+                    onclick="addToCart('Comfortable Sofa', 50.50, './images-2/img-2.png')" />
+                </div>
+                <div class="card-body-2 dark p-3 text-light rounded">
+                  <p class="mb-1">Comfortable Sofa</p>
+                  <span class="price">50.50$</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4">
+              <div class="border border-1 rounded position-relative card-container">
+                <div class="p-3 card-bg-2">
+                  <img src="./images-2/img-3.png" data-url="./productsFiles/lamp.html"
+                    class="selected-item-1 img-fluid card-img-top" alt="Beautiful Lamp" />
+                  <i class="bi bi-heart position-absolute start-0 top-0 fs-2 ms-2 mt-2 text-warning"></i>
+                  <img class="bg-warning rounded-circle position-absolute end-0 bottom-0 me-2 mb-2"
+                    src="./images-2/cart.png" alt="Cart" style="padding: 2px; width: 30px; height: 30px;"
+                    onclick="addToCart('Beautiful Large Lamp ', 50.50, './images-2/img-3.png')" />
+                </div>
+                <div class="card-body-2 dark p-3 text-light rounded">
+                  <p class="mb-1">Beautiful Large Lamp </p>
+                  <span class="price">50.50$</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4">
+              <div class="border border-1 rounded position-relative card-container">
+                <div class="p-3 card-bg-2">
+                  <img src="./images-2/img-1.png" data-url="./productsFiles/pilow.html"
+                    class="selected-item-1 img-fluid card-img-top" alt="Sofa" />
+                  <i class="bi bi-heart position-absolute start-0 top-0 fs-2 ms-2 mt-2 text-warning"></i>
+                  <img class="bg-warning rounded-circle position-absolute end-0 bottom-0 me-2 mb-2"
+                    src="./images-2/cart.png" alt="Cart" style="padding: 2px; width: 30px; height: 30px;"
+                    onclick="addToCart('Pillow White', 10.50, './images-2/img-1.png')" />
+                </div>
+                <div class="card-body-2 dark p-3 text-light rounded">
+                  <p class="mb-1">White Soft Pillow</p>
+                  <span class="price">10.50$</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-1 mt-2" id="product-cards">
+              <div class="col-4">
+                <div class="border border-1 rounded position-relative card-container">
+                  <div class="p-3 card-bg-2">
+                    <img src="./images-2/img-4.png" data-url="./productsFiles/dinner.html"
+                      class="selected-item-1 img-fluid card-img-top" alt="Dinner Table" />
+                    <i class="bi bi-heart position-absolute start-0 top-0 fs-2 ms-2 mt-2 text-warning"></i>
+                    <img class="bg-warning rounded-circle position-absolute end-0 bottom-0 me-2 mb-2"
+                      src="./images-2/cart.png" alt="Cart" style="padding: 2px; width: 30px; height: 30px;"
+                      onclick="addToCart('Dinner Table', 100.5, './images-2/img-4.png')" />
+                  </div>
+                  <div class="card-body-2 dark p-3 text-light rounded">
+                    <p class="mb-1">Dinner Table</p>
+                    <span>100.5$</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="border border-1 rounded position-relative card-container">
+                    <div class="p-3 card-bg-2">
+                        <img data-url="./productsFiles/lamp2.html" src="./images-2/img-5.png"
+                             class="img-fluid card-img-top selected-item-1" alt="Beautiful Lamp" />
+                        <i class="bi bi-heart position-absolute start-0 top-0 fs-2 ms-2 mt-2 text-warning"></i>
+                        <img class="bg-warning rounded-circle position-absolute end-0 bottom-0 me-2 mb-2"
+                             src="./images-2/cart.png" alt="Cart" style="padding: 2px; width: 30px; height: 30px;"
+                             onclick="addToCart('Beautiful Lamp', 150.50, './images-2/img-5.png')" />
+                    </div>
+                    <div class="card-body-2 dark p-3 text-light rounded">
+                        <p class="mb-1">Beautiful Lamp</p>
+                        <span>150.50$</span>
+                    </div>
+                </div>
+            </div>
+
+              <div class="col-4">
+                <div class="border border-1 rounded position-relative card-container">
+                  <div class="p-3 card-bg-2">
+                    <img data-url="./productsFiles/bedSet.html" src="./images-2/img-6.png"
+                      class="img-fluid card-img-top selected-item-1" alt="Pillows on Bed Set" />
+                    <i class="bi bi-heart position-absolute start-0 top-0 fs-2 ms-2 mt-2 text-warning"></i>
+                    <img class="bg-warning rounded-circle position-absolute end-0 bottom-0 me-2 mb-2"
+                      src="./images-2/cart.png" alt="Cart" style="padding: 2px; width: 30px; height: 30px;"
+                      onclick="addToCart('Pillows on bed set', 105.5, './images-2/img-6.png')" />
+                  </div>
+                  <div class="card-body-2 dark p-3 text-light rounded">
+                    <p class="mb-1">Pillows on Bed Set</p>
+                    <span>105.5$</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="row g-1 mt-2" id="product-cards">
+              <div class="col-4">
+                <div class="border border-1 rounded position-relative card-container">
+                  <div class="p-3 card-bg-2">
+                    <img data-url="./productsFiles/sofa.html" src="./images-2/img-7.png"
+                      class="img-fluid card-img-top selected-item-1" alt="Comfortable Sofa" />
+                    <i class="bi bi-heart position-absolute start-0 top-0 fs-2 ms-2 mt-2 text-warning"></i>
+                    <img class="bg-warning rounded-circle position-absolute end-0 bottom-0 me-2 mb-2"
+                      src="./images-2/cart.png" alt="Cart" style="padding: 2px; width: 30px; height: 30px;"
+                      onclick="addToCart('Comfortable sofa', 50.5, './images-2/img-7.png')" />
+                  </div>
+                  <div class="card-body-2 dark p-3 text-light rounded">
+                    <p class="mb-1">Comfortable Sofa</p>
+                    <span>50.5$</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="border border-1 rounded position-relative card-container">
+                  <div class="p-3 card-bg-2">
+                    <img data-url="./productsFiles/ottoman.html" src="./images-2/img-8.png"
+                      class="img-fluid card-img-top selected-item-1" alt="Soft Teal Ottoman" />
+                    <i class="bi bi-heart position-absolute start-0 top-0 fs-2 ms-2 mt-2 text-warning"></i>
+                    <img class="bg-warning rounded-circle position-absolute end-0 bottom-0 me-2 mb-2"
+                      src="./images-2/cart.png" alt="Cart" style="padding: 2px; width: 30px; height: 30px;"
+                      onclick="addToCart('Soft Teal Ottoman', 20.5, './images-2/img-8.png')" />
+                  </div>
+                  <div class="card-body-2 dark p-3 text-light rounded">
+                    <p class="mb-1">White Soft Teal Ottoman</p>
+                    <span>20.5$</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="border border-1 rounded position-relative card-container">
+                  <div class="p-3 card-bg-2">
+                    <img data-url="./productsFiles/red-pilow.html" src="./images-2/img-9.png"
+                      class="img-fluid card-img-top selected-item-1" alt="Soft Pillow" />
+                    <i class="bi bi-heart position-absolute start-0 top-0 fs-2 ms-2 mt-2 text-warning"></i>
+                    <img class="bg-warning rounded-circle position-absolute end-0 bottom-0 me-2 mb-2"
+                      src="./images-2/cart.png" alt="Cart" style="padding: 2px; width: 30px; height: 30px;"
+                      onclick="addToCart('Soft Pillow', 11.5, './images-2/img-9.png')" />
+                  </div>
+                  <div class="card-body-2 dark p-3 text-light rounded">
+                    <p class="mb-1">Red Soft Pillow</p>
+                    <span>11.5$</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="row g-1 mt-2" id="product-cards">
+              <div class="col-4">
+                <div class="border border-1 rounded position-relative card-container">
+                  <div class="p-3 card-bg-2">
+                    <img data-url="./productsFiles/blue-soft-teal.html" src="./images-2/img-10.png"
+                      class="img-fluid card-img-top selected-item-1" alt="Soft Teal Ottoman" />
+                    <i class="bi bi-heart position-absolute start-0 top-0 fs-2 ms-2 mt-2 text-warning"></i>
+                    <img class="bg-warning rounded-circle position-absolute end-0 bottom-0 me-2 mb-2"
+                      src="./images-2/cart.png" alt="Cart" style="padding: 2px; width: 30px; height: 30px;"
+                      onclick="addToCart('Soft Teal Ottoman', 21.5, './images-2/img-10.png')" />
+                  </div>
+                  <div class="card-body-2 dark p-3 text-light rounded">
+                    <p class="mb-1">Blue Soft Teal Ottoman</p>
+                    <span>21.5$</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="border border-1 rounded position-relative card-container">
+                  <div class="p-3 card-bg-2">
+                    <img data-url="./productsFiles/arm-bench.html" src="./images-2/img-11.png"
+                      class="img-fluid card-img-top selected-item-1" alt="Arm Bench" />
+                    <i class="bi bi-heart position-absolute start-0 top-0 fs-2 ms-2 mt-2 text-warning"></i>
+                    <img class="bg-warning rounded-circle position-absolute end-0 bottom-0 me-2 mb-2"
+                      src="./images-2/cart.png" alt="Cart" style="padding: 2px; width: 30px; height: 30px;"
+                      onclick="addToCart('Arm Bench', 60.5, './images-2/img-11.png')" />
+                  </div>
+                  <div class="card-body-2 dark p-3 text-light rounded">
+                    <p class="mb-1">Arm Bench</p>
+                    <span>60.5$</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="border border-1 rounded position-relative card-container">
+                  <div class="p-3 card-bg-2">
+                    <img data-url="./productsFiles/clock.html" src="./images-2/img-12.png"
+                      class="img-fluid card-img-top selected-item-1" alt="Clock" />
+                    <i class="bi bi-heart position-absolute start-0 top-0 fs-2 ms-2 mt-2 text-warning"></i>
+                    <img class="bg-warning rounded-circle position-absolute end-0 bottom-0 me-2 mb-2"
+                      src="./images-2/cart.png" alt="Cart" style="padding: 2px; width: 30px; height: 30px;"
+                      onclick="addToCart('Clock', 100, './images-2/img-12.png')" />
+                  </div>
+                  <div class="card-body-2 dark p-3 text-light rounded">
+                    <p class="mb-1">Clock</p>
+                    <span>100$</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+          </div>
+        </div>
+  </section>
+
+  <!-- 
+     ======================
+     FOOTER MENU
+     ======================
+      -->
+
+  <!-- full screen -->
+  <section class="mt-5 d-none d-md-block"> <!-- Hidden on all mobile screens -->
+    <div class="h-hs-bg text-white py-5 mt-5">
+      <div class="container">
+        <h2 class="text-center">Furniture Haven</h2>
+        <hr />
+
+        <div class="row justify-content-between d-flex flex-column flex-md-row text-center text-md-start">
+          <ul class="col-12 col-md-2 mb-3 mb-md-0 ms-3">
+            <h4>About</h4>
+            <li class="list-unstyled">Our company</li>
+            <li class="list-unstyled my-2">Our Story</li>
+            <li class="list-unstyled">Blog</li>
+          </ul>
+
+          <ul class="col-12 col-md-2 mb-3 mb-md-0">
+            <h4>Information</h4>
+            <li class="list-unstyled">Delivery Information</li>
+            <li class="list-unstyled my-2">Privacy Policy</li>
+            <li class="list-unstyled">Terms & Conditions</li>
+            <li class="list-unstyled mt-2">Returns</li>
+          </ul>
+
+          <ul class="col-12 col-md-2 mb-3 mb-md-0">
+            <h4>Support</h4>
+            <li class="list-unstyled">Contact Us</li>
+            <li class="list-unstyled my-2">Help</li>
+            <li class="list-unstyled">FAQ</li>
+            <li class="list-unstyled mt-2">Checkout</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- small screen -->
+  <section class="d-block d-md-none"> <!-- Show on mobile screens only -->
+    <div class="h-hs-bg text-white py-5 mt-5">
+      <div class="container">
+        <h2 class="text-center">Furniture Haven</h2>
+        <hr />
+
+        <div class="row d-flex justify-content-center text-center text-md-start">
+          <ul class="col-4 mb-3">
+            <h4>About</h4>
+            <li class="list-unstyled">Our company</li>
+            <li class="list-unstyled my-2">Our Story</li>
+            <li class="list-unstyled">Blog</li>
+          </ul>
+
+          <ul class="col-4 mb-3">
+            <h4>Information</h4>
+            <li class="list-unstyled">Delivery Information</li>
+            <li class="list-unstyled my-2">Privacy Policy</li>
+            <li class="list-unstyled">Terms & Conditions</li>
+            <li class="list-unstyled mt-2">Returns</li>
+          </ul>
+
+          <ul class="col-4 mb-3">
+            <h4>Support</h4>
+            <li class="list-unstyled">Contact Us</li>
+            <li class="list-unstyled my-2">Help</li>
+            <li class="list-unstyled">FAQ</li>
+            <li class="list-unstyled mt-2">Checkout</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- offf canva Cart items Show Here  -->
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
